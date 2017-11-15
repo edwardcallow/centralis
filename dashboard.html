@@ -79,7 +79,7 @@
 				</div>
 			</div>
 		</nav>
-		<div class="navbar navbar-default navbar-static-top">
+		<div class="navbar navbar-default">
 			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".main-nav">
@@ -222,35 +222,82 @@
 								<div class="panel-heading">
 									<div class="panel-title">Messages <span class="badge">1</span></div>
 								</div>
-								<table class="table">
-									<tr>
-										<th>Subject</th>
-										<th>Time</th>
-										<th>From</th>
-										<th>To</th>
-									</tr>
-									<tr class="info">
-										<td><a href="#message-new"><strong>Congratulations!</strong></a></td>
-										<td>7 Dec 2016 at 10pm</td>
-										<td>Toby Rome</td>
-										<td>Everyone</td>
-									</tr>
-									<tr>
-										<td><a href="#message-new">Crew update</a></td>
-										<td>4 Dec 2016 at 9pm</td>
-										<td>Edward Callow</td>
-										<td>All crew</td>
-									</tr>
-									<tr>
-										<td><a href="#message-new">Les Mis stools</a></td>
-										<td>1 Dec 2016 at 6pm</td>
-										<td>Katie Marie</td>
-										<td>Edward Callow</td>
-									</tr>
-								</table>
-								<div class="panel-body">
+								<div id="messages-overview" style="display: block">
+									<table class="table">
+										<tr>
+											<th>Subject</th>
+											<th>Time</th>
+											<th>From</th>
+											<th>To</th>
+										</tr>
+										<tr class="info">
+											<td><a href="javascript:dashboardMessageOpen('messages-overview','messages-detail-one')"><strong>Congratulations!</strong></a></td>
+											<td>7 Dec 2016 at 10pm</td>
+											<td>Toby Rome</td>
+											<td>Everyone</td>
+										</tr>
+										<tr>
+											<td><a href="javascript:dashboardMessageOpen('messages-overview','messages-detail-two')">Crew update</a></td>
+											<td>4 Dec 2016 at 9pm</td>
+											<td>Edward Callow</td>
+											<td>All crew</td>
+										</tr>
+										<tr>
+											<td><a href="javascript:dashboardMessageOpen('messages-overview','messages-detail-three')">Les Mis stools</a></td>
+											<td>1 Dec 2016 at 6pm</td>
+											<td>Katie Marie</td>
+											<td>Edward Callow</td>
+										</tr>
+									</table>
+									<div class="panel-body">
+											<p>Go to <a href="#messages">messages</a></p>
+										</div>
+								</div>
+
+								<div id="messages-detail-one" style="display: none">
+									<div class="panel-body">
+										<p><strong>Congratulations!</strong>
+											<br/>
+										7 Dec 2016 at 10pm
+											<br/>
+										From Toby Rome</p>
+										<p>Dear Sophie, Katie, Ed, Laura and all the cast, crew and band of Hairspray
+											<br/><br/>
+										What you have achieved last night cannot be described as anything other than an utter triumph. When I said that the production/lead up to the show was the most professional I’d seen I wasn’t exaggerating. However what I actually saw on stage last night still far surpassed my expectations. I always come on the first night, and have never seen an opening performance that was so tight and so smooth across the board. People always say to me “Don’t go on the first night, it will be rubbish!”, but no-one can say that again now, as you have raised the bar in terms of what is achievable.
+											<br/><br/>
+										Every aspect of the show was of the highest standard. The band were extraordinary, and worth the admission price alone. The tech was so smooth, with perhaps the largest team ever seen for a Sixth Form show, yet it was clear that you were working together perfectly. In terms of set, costume, make-up and lighting it looked great (though I will never be able to look at James again without picturing him in a dress). The sound was great and added seamlessly to the atmosphere throughout. Great singing across the board and easily the best and most ambitious choreography I’ve ever seen in a Sixth Form show – you were all so in synch on the bell ringing it was like you had a mirror facing the stage. You don’t need me to tell you that the performances were excellent. I will refrain from singling people out as I will end up running out of space. Even the professional looking programme had audience members gushing (love the glamorous head shots on the front cover!).
+											<br/><br/>
+										Perhaps the most impressive achievement is that this morning I have been inadvertently singing “Good Morning Baltimore” on my way in to school. For someone who generally hates musicals and had never heard the songs from this show before last night, this is quite something. It is a good thing that there is no whole school show this year, as they would have found it impossible to follow you.
+											<br/><br/>
+										Enjoy the rest of the run and try to make every performance just as good as the one I saw. You deserve all the praise that will come your way.
+											<br/><br/>
+										Toby Rome
+											<br/>
+										(The main in the back row with the stupid grin on his face all night)</p>
+										<a href="javascript:dashboardMessageOpen('messages-overview','messages-detail-one')">Back</a>
+										<br/><br/>
 										<p>Go to <a href="#messages">messages</a></p>
 									</div>
+								</div>
+
+								<div id="messages-detail-two" style="display: none">
+									<div class="panel-body">
+										<p>This is message two.</p>
+										<a href="javascript:dashboardMessageOpen('messages-overview','messages-detail-two')">Back</a>
+										<br/><br/>
+										<p>Go to <a href="#messages">messages</a></p>
+									</div>
+								</div>
+
+								<div id="messages-detail-three" style="display: none">
+									<div class="panel-body">
+										<p>This is message three.</p>
+										<a href="javascript:dashboardMessageOpen('messages-overview','messages-detail-three')">Back</a>
+										<br/><br/>
+										<p>Go to <a href="#messages">messages</a></p>
+									</div>
+								</div>
+
 							</div>
 						</div>
 					</div>
@@ -329,5 +376,8 @@
 		<script src="js/bootstrap.min.js"></script>
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<script src="js/ie10-viewport-bug-workaround.js"></script>
+
+		<!-- Not Bootstrap core JavaScript -->
+		<script src="js/general.js" type="text/javascript"></script>
 	</body>
 </html>
